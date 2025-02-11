@@ -67,10 +67,11 @@ class ImageGallery extends Component {
       <ul className={css.imageGallery}>
       {images.map(({id, webformatURL, largeImageURL}) => (
       
+      (id && webformatURL && largeImageURL) && 
       <ImageGalleryItem
-      id={id}
-      webformatURL={webformatURL}
-      largeImageURL={largeImageURL}
+        id={id}
+        webformatURL={webformatURL}
+        largeImageURL={largeImageURL}
       />
       
       ))}
